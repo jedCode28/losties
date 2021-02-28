@@ -14,9 +14,9 @@ island1 = Island.create(name: "Main")
 island2 = Island.create(name: "Small")
 
 
-tribe1 = island1.tribes.create(name: "Survivors1")  
-tribe2 = island1.tribes.create(name: "Others1")
+tribe1 = island1.tribes.create(name: "Main Survivors")  
+tribe2 = island1.tribes.create(name: "Sneaky Others")
 
-tribe3 = island2.tribes.create(name:"Survivors2")
-tribe4 = island2.tribes.create(name:"Others2")
+tribe3 = island2.tribes.create(name:"Captured Survivors")
+tribe4 = island2.tribes.create(name:"Main Others")
 

@@ -9,7 +9,8 @@ export default (props) => {
     return (
       <div>
         <h3>{tribe.id}: {tribe.name}</h3>
-        
+         {/* /islands/:island_id/tribes/:id  */}
+        <a href={`/islands/${island.id}/tribes/${tribe.id}`}>Show This Tribe</a>
       </div>
     )
     })
