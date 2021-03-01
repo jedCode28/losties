@@ -8,7 +8,8 @@ export default (props) => {
           <div>
             <h2>*{island.name}*</h2>
             <a href={`/islands/${island.id}`}>Show This Island</a>
-            <a href={`/islands/${island.id}`} data-method="delete" style={{margin:'5px'}}>Destroy This Island</a>
+            <a href={`/islands/${island.id}/edit`} style={{marginLeft:'9px'}}>Edit This Island</a>
+            <a href={`/islands/${island.id}`} data-method="delete" style={{marginLeft:'9px'}}>Destroy This Island</a>
           </div>
         )
     })

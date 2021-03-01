@@ -20,7 +20,7 @@ tribe2 = island1.tribes.create(name: "Sneaky Others")
 tribe3 = island2.tribes.create(name:"Captured Survivors")
 tribe4 = island2.tribes.create(name:"Main Others")
 
-member1 = tribe1.members.create(name:"Jack")
-member2 = tribe1.members.create(name:"Sawyer")
-member3 = tribe1.members.create(name:"Hurley")
+member1 = tribe1.members.create(name:"Jack")     # I could not figure out how to make each tribe
+member2 = tribe1.members.create(name:"Sawyer")   # have unique members, at least within the time
+member3 = tribe1.members.create(name:"Hurley")   # constraints... or frying haha
 

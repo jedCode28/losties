@@ -28,11 +28,13 @@ class IslandsController < ApplicationController
   end
 
   def update
-    if @island.update
-      redirect_to @island
-    else 
-      render component: "IslandEdit"
-    end 
+    #@island = Island.find(params[:id])
+    @island.update(island_params)
+    # if @island.update
+    redirect_to root_path(@island)
+    # else 
+    #   render component: "IslandNew"
+    # end 
   end 
 
   def destroy
@@ -46,9 +48,9 @@ class IslandsController < ApplicationController
     @island = Island.find(params[:id])
   end 
 
-  # def island_params
-  #   params.require(:island).permit(:name)
-  # end 
+  def island_params
+    params.require(:island).permit(:name)
+  end 
 
 
 end
