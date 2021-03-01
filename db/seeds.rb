@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-Tribe.destroy_all
 Island.destroy_all
+Tribe.destroy_all
+
 
 
 island1 = Island.create(name: "Main")
@@ -19,4 +19,8 @@ tribe2 = island1.tribes.create(name: "Sneaky Others")
 
 tribe3 = island2.tribes.create(name:"Captured Survivors")
 tribe4 = island2.tribes.create(name:"Main Others")
+
+member1 = tribe1.members.create(name:"Jack")
+member2 = tribe1.members.create(name:"Sawyer")
+member3 = tribe1.members.create(name:"Hurley")
 

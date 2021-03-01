@@ -11,16 +11,44 @@ class IslandsController < ApplicationController
   end
 
   def new
+    render component: "IslandNew"
   end
 
+  def create
+    @island=Island.new(name:"The Freighter")
+    if @island.save
+      redirect_to islands_path
+    else 
+      render :new
+    end 
+  end 
+
   def edit
+    render component: "IslandEdit", props:{ island: @island}
   end
+
+  def update
+    if @island.update
+      redirect_to @island
+    else 
+      render component: "IslandEdit"
+    end 
+  end 
+
+  def destroy
+    @island.destroy
+    redirect_to islands_path
+  end 
 
   private
 
   def set_island 
     @island = Island.find(params[:id])
   end 
+
+  # def island_params
+  #   params.require(:island).permit(:name)
+  # end 
 
 
 end
